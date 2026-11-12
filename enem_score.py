@@ -1,4 +1,5 @@
-# %% Cell 1: Load libraries
+# %% Cell 1
+# Load libraries
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -6,7 +7,8 @@ from matplotlib import pyplot as plt
 from scipy.special import expit
 
 
-# %% Cell 2: Setting up data
+# %% Cell 2
+# Setting up data
 np.random.seed(100)
 n = 100
 tuition = np.random.normal(1000, 300, n)
@@ -21,7 +23,8 @@ enem_score *= 1000
 data = pd.DataFrame(dict(enem_score=enem_score, Tuition=tuition, Tablet=tablet))
 
 
-# %% Cell 3: Plotting the graph
+# %% Cell 3
+# Plotting the graph
 plt.figure(figsize=(8,8))
 sns.boxplot(y="enem_score", x="Tablet", data=data).set_title('ENEM score by Tablet in Class')
 plt.show()
@@ -33,7 +36,8 @@ plt.show()
 # this happened bcz students with higher tution fee are more likely to get tabs here
 # and higher tution fee also increases the ENEM score
 # so even tho their marks decreased the plot showed boost in their ENEM scores
-# %% Cell 4: ENEM Score by tuition cost
+# %% Cell 4
+# ENEM Score by tuition cost
 plt.figure(figsize=(10,6))
 sns.scatterplot(x="Tuition", y="enem_score", hue="Tablet", data=data, s=70).set_title('ENEM score by Tuition Cost')
 plt.show()
