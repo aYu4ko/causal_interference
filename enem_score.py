@@ -1,4 +1,6 @@
 # %% Cell 1
+# The ,ipynb file is auto generated using jupytext and nbconvert, so there might be some issues
+
 # Load libraries
 import numpy as np
 import pandas as pd
@@ -41,3 +43,5 @@ plt.show()
 plt.figure(figsize=(10,6))
 sns.scatterplot(x="Tuition", y="enem_score", hue="Tablet", data=data, s=70).set_title('ENEM score by Tuition Cost')
 plt.show()
+### as it can be seen here the higher the tuition cost the higher the enem score,
+# so even if their scores get reduced its still greater than the no tablet score
