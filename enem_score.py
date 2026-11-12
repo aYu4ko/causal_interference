@@ -33,3 +33,7 @@ plt.show()
 # this happened bcz students with higher tution fee are more likely to get tabs here
 # and higher tution fee also increases the ENEM score
 # so even tho their marks decreased the plot showed boost in their ENEM scores
+# %% Cell 4: ENEM Score by tuition cost
+plt.figure(figsize=(10,6))
+sns.scatterplot(x="Tuition", y="enem_score", hue="Tablet", data=data, s=70).set_title('ENEM score by Tuition Cost')
+plt.show()
