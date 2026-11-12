@@ -1,9 +1,12 @@
+# %% Cell 1: Load libraries
 import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
 from scipy.special import expit
 
+
+# %% Cell 2: Setting up data
 np.random.seed(100)
 n = 100
 tuition = np.random.normal(1000, 300, n)
@@ -17,12 +20,14 @@ enem_score *= 1000
 
 data = pd.DataFrame(dict(enem_score=enem_score, Tuition=tuition, Tablet=tablet))
 
+
+# %% Cell 3: Plotting the graph
 plt.figure(figsize=(8,8))
 sns.boxplot(y="enem_score", x="Tablet", data=data).set_title('ENEM score by Tablet in Class')
 plt.show()
 
 
-### RESULT
+### CONCLUSION
 # even though the students are getting less score after getting tablets, the plot shows otherwise
 # this is because the causation between tablets and low scores is negative
 # this happened bcz students with higher tution fee are more likely to get tabs here
